@@ -13,18 +13,18 @@ class Animal:
     
     @classmethod
     def totalPorTipo(self):
-        from zooAnimales import Anfibio
-        from zooAnimales import Ave
-        from zooAnimales import Mamifero
-        from zooAnimales import Pez
-        from zooAnimales import Reptil
+        from zooAnimales.anfibio import Anfibio
+        from zooAnimales.ave import Ave
+        from zooAnimales.mamifero import Mamifero
+        from zooAnimales.pez import Pez
+        from zooAnimales.reptil import Reptil
         return "Mamiferos : {}\nAves : {}\nReptiles : {}\nAnfibios : {}".format(Mamifero.cantidadMamiferos(), 
         Ave.cantidadAves(), Reptil.cantidadReptiles(), Pez.cantidadPeces(), Anfibio.cantidadAnfibios())
     
     def setZona(self, z):
         self._zona = z
     
-    def __str__(self):
+    def toString(self):
         if self._zona!=None:
             return "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + str(self._genero) + ", la zona en la que me ubico es " + str(self._zona) + ", en el " + str(self._zona.getZoo())
         return "Mi nombre es " + self._nombre + ", tengo una edad de " + str(self._edad) + ", habito en " + self._habitat + " y mi genero es " + str(self._genero)
